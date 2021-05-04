@@ -1,0 +1,50 @@
+body{
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: darkviolet;
+}
+
+.app-header{
+  display: flex;
+
+}
+
+.default-btn{
+  padding: 8px; 
+  width : 100px; 
+  margin : 5px;
+  border-radius: 3px;
+  border: none;
+}
+
+.selected-btn{
+  padding: 8px; 
+  width : 100px; 
+  margin : 5px; 
+  border: 0;
+  border-radius: 3px;
+  background:deeppink;
+  color : white;
+}
+
+.selected-btn ::selection{
+  border: none;
+}
+
+.suggested-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.suggested-item{
+  width: 260px;
+    align-self: center;
+    margin: 3px;
+    font-size: larger;
+    border: 1px solid darkgray;
+    padding: 10px 0px;
+    border-radius: 5px;
+    color: white;
+}
