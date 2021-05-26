@@ -4,7 +4,7 @@ function TripCard(props) {
     if(props.selected === "road")
         return(
                 <section className="suggested-item">
-                    <div style={{fontWeight : "bold"}}>{props.tripItem.name}</div>
+                    <div className="destination">{props.tripItem.name}</div>
                     <div>Distance : {props.tripItem.dist}</div>
                     <div>Time : {props.tripItem.time}</div>
                     <div>Highways : {props.tripItem.highways}</div>
@@ -14,7 +14,7 @@ function TripCard(props) {
     else if(props.selected === "cruise")
         return(
                 <section className="suggested-item">
-                    <div style={{fontWeight : "bold"}}>{props.tripItem.name}</div>
+                    <div className="destination">{props.tripItem.name}</div>
                     <div>Location : {props.tripItem.location}</div>
                     <div>Duration : {props.tripItem.duration}</div>
                     <div>Price : {props.tripItem.price}</div>
@@ -23,7 +23,7 @@ function TripCard(props) {
     else if(props.selected === "famjam")
         return(
                 <section className="suggested-item">
-                    <div style={{fontWeight : "bold"}}>{props.tripItem.name}</div>
+                    <div className="destination">{props.tripItem.name}</div>
                     <div>Famous food : {props.tripItem.food}</div>
                     <div>Eat at : {props.tripItem.eatAt}</div>
                 </section>
@@ -31,7 +31,7 @@ function TripCard(props) {
     else
         return(
             <section className="suggested-item">
-                    <div style={{fontWeight : "bold"}}>{props.tripItem.name}</div>
+                    <div className="destination">{props.tripItem.name}</div>
                     <div>Things to do : {props.tripItem.do}</div>
                     <div>Stay at : {props.tripItem.stay}</div>
                     <div>Budget : {props.tripItem.budget}</div>

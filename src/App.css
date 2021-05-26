@@ -48,3 +48,8 @@ body{
   border-radius: 5px;
   color: white;
 }
+
+.destination{
+  font-weight : bold;
+  font-style:italic;
+}

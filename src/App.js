@@ -53,7 +53,6 @@ function App() {
 
   const [suggestions,setSuggestions] = useState([]);
   const [selected,setSelected] = useState("");
-  const [btnClass,setBtnClass] = useState("default-btn");
 
 
   function btnClickHandler(type){
@@ -77,24 +76,24 @@ function App() {
         <h4 style = {{margin : "10px 0px",color:"white"}}>Check out some suggestions here for your trips. Select a category.</h4>
         
         <div>
-          <button className = {selected === "friends" ? "selected-btn" : btnClass}
+          <button className = {selected === "friends" ? "selected-btn" : "default-btn"}
           onClick = {() => btnClickHandler("friends")}
           >Friends</button>
-          <button className = {selected === "famjam" ? "selected-btn" : btnClass}
+          <button className = {selected === "famjam" ? "selected-btn" : "default-btn"}
           onClick = {() => btnClickHandler("famjam")}
           >Famjam</button>
-          <button className = {selected === "road" ? "selected-btn" : btnClass}
+          <button className = {selected === "road" ? "selected-btn" : "default-btn"}
           onClick = {() => btnClickHandler("road")}
           >Road Trips</button>
-          <button className = {selected === "cruise" ? "selected-btn" : btnClass}
+          <button className = {selected === "cruise" ? "selected-btn" : "default-btn"}
           onClick = {() => btnClickHandler("cruise")}
           >Cruise</button>
         </div>
         </div>
         <hr style={{color:'black'}}></hr>
         <div className = "suggested-list">
-          {suggestions.map(item=>{
-            return <TripCard key={item} tripItem = {item} selected = {selected} />
+          {suggestions.map((item,i)=>{
+            return <TripCard key={item+i} tripItem = {item} selected = {selected} />
           })}
         </div>      
     </div>
